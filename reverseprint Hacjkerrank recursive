@@ -1,0 +1,5 @@
+void reversePrint(SinglyLinkedListNode* head) {
+    if(head==nullptr) return;
+    reversePrint(head->next);
+    cout<<head->data<<endl;
+}
