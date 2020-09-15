@@ -1,0 +1,9 @@
+SinglyLinkedListNode* reverse(SinglyLinkedListNode* head) {
+   if(head==nullptr||head->next==nullptr){
+            return head;
+    }
+    SinglyLinkedListNode *h=reverse(head->next);
+    head->next->next=head;
+    head->next=nullptr;
+    return h;
+}
