@@ -1,0 +1,31 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <set>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    
+int counter{0};
+set<int> set1{0};
+cin >> counter;
+for (int i=0; i<counter; ++i){
+    int type, q;
+    cin >> type >> q;
+    switch (type){
+        case 1:
+            set1.insert(q);
+            break;
+        case 2:
+            set1.erase(q);
+            break;
+        case 3:
+            cout << (set1.find(q) == set1.end() ? "No" : "Yes") << endl;
+            break;
+    }
+}  
+return 0;
+}
