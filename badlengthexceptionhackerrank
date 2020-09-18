@@ -1,0 +1,14 @@
+class BadLengthException:public exception{
+    private:
+      int n;
+    public:
+      BadLengthException(int n);
+    int what();
+};
+
+BadLengthException::BadLengthException(int n){
+    this->n=n;
+}
+int BadLengthException::what(){
+    return n;
+}
