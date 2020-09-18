@@ -1,0 +1,22 @@
+class Student
+{
+    private:
+     int scores[5];
+     int total{0};
+    public:
+       void input();
+       int calculateTotalScore();
+};
+void Student::input()
+    {
+        for(int i=0;i<5;i++)
+        {
+            cin>>scores[i];
+            total=total+scores[i];
+        }
+    }
+int Student::calculateTotalScore()
+       {        
+            return(total);
+       }   
+}
